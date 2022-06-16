@@ -1,0 +1,75 @@
+
+
+<html style="background-color: #ffcccc">
+<head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <style>
+      body, html {
+        min-width: 90%;
+        min-height: 100%;
+        margin: 0;
+        padding: 20;
+        font: Arial 14px;
+      }
+    </style>
+    <!--<link rel="stylesheet" href="style.css"/>-->
+    <!--<script defer src="script.js"></script>-->
+  </head>
+<body>
+<hr>
+<hr>
+<h2 style="color: brown" align="justify"><b>NIC GHB PRODUCTION</b></h2>
+<hr>
+<p style="color: darkgreen" align="justify">Nic GHB Production inajihusisha na kutoa kozi za tehama kwa ajili ya maendeleo ya watu na makampuni. Unataka kujifunza?</p>
+<h3 align="justify">Ili kuendelea na huduma zetu, jisajili kwanza hapo chini;</h3>
+<form method="POST" action="nic ghb production.php" style="background-color: #fffccc">
+    <input type="text" name="name" placeholder="Jina" id="jina" required></br /><br />
+    <input type="email" name="email" placeholder="E-Mail" id="E-mail" required></br /><br />
+    <input type="number" name="age" placeholder="Umri"><br /><br />
+    <input type="radio" name="gender" value="ME"> ME
+    <input type="radio" name="gender" value="KE"> KE <br />
+
+    <input type="text" name="password" placeholder="Nenosiri" id="password" required></br /><br />
+    <input type="submit" name="submit" value="Tuma" onclick="buttonclick()">
+<script>
+function buttonclick(){
+alert("Umefanikiwa kujisajili!");
+}
+</script>
+
+<h3 style="color: darkgreen" align="justify">Kama una akaunti tayari, ingia kwa taarifa zako hapo chini:</h3>
+</form>
+ <form action="nic ghb production.php" method="POST">
+<label for="username">Username:</label>
+<input type="text" name="username" id="username" required><br />
+<label for="password">Password:</label>
+<input type="password" name="password" id="password" required><br />
+<input type="submit" value="Ingia" onclick="buttonclick()">
+</form>
+<script>
+function buttonclick(){
+alert("Hakikisha taarifa ulizoingiza ni sahihi")
+}
+</script>
+<?php
+if (isset($_POST["name"]) && !empty($_POST["name"])) {
+    $name = $_POST["name"];
+    if (!preg_match("/^[a-zA-Z ]*$/",$name))
+    echo "Name: Only letters and whitespace allowed";
+    else
+    echo "Name: ".$_POST["name"]."";
+}
+if (isset($_POST["email"]) && !empty($_POST["email"])) {
+    echo "E-Mail: ".$_POST["email"]."";
+}
+if (isset($_POST["age"]) &&!empty($_POST["
+echo "Age: ".$_POST["age"]."";
+}
+if (isset($_POST["gender"]) && !empty($_POST["gender"])) {
+    echo "Gender: ".$_POST["gender"];
+} ?>
+<ul class="copyright" style="background-color: #eefffc">
+    &copy; nic ghb production. | | Design: <a href="http://nicghbproduction.com/">nic ghb</a></ul><hr><hr>
+</body>
+</html>
